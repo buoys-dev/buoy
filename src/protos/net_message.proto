@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package dev.buoys;
+
+import "nanopb.proto";
+
+/**
+ * A message to be sent over a public network.
+ * Primarily, in a single UDP packet.
+ * Please, take care to keep it small enough for a single UDP packet.
+ */
+message NetMessage {
+  optional bytes sn=1 [(nanopb).max_size = 32]; // SHA256 of the unique serial number of the device.
+  optional bytes hmac=2 [(nanopb).max_size = 32]; // HMAC-SHA256 of the payload.
+  optional bytes payload=3 [(nanopb).max_size = 256]; // ChaCha20 encrypted payload.
+}
