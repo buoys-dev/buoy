@@ -1,3 +1,12 @@
 [submodule "src/protos"]
 	path = src/protos
 	url = git@github.com:buoys-dev/buoys-protos.git
+[submodule "src/uzlib"]
+	path = src/uzlib
+	url = https://github.com/pfalcon/uzlib.git
+[submodule "src/MKRNB2"]
+	path = src/MKRNB2
+	url = https://github.com/arduino-libraries/MKRNB.git
+[submodule "src/SSLClient"]
+	path = src/SSLClient
+	url = https://github.com/OPEnSLab-OSU/SSLClient.git
